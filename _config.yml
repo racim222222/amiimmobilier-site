@@ -1,0 +1,6 @@
+# GitHub Pages : seuls les fichiers du site sont publiés.
+exclude:
+  - build.py
+  - README.md
+  - AVANT-MISE-EN-LIGNE.md
+  - "*.zip"

@@ -554,6 +554,7 @@ def contact():
 </ul>
 <div class="coordonnees">
 <p><b>E-mail</b><br><a href="mailto:{MAIL}">{MAIL}</a></p>
+<p><b>Téléphone</b><br><a href="tel:+213773254539">+213 773 25 45 39</a></p>
 <p id="whatsapp-bloc" hidden><b>WhatsApp</b><br><a id="whatsapp-lien" href="#" target="_blank" rel="noopener">Écrire sur WhatsApp</a></p>
 </div>
 </div>
@@ -622,33 +623,28 @@ def contact():
 
 
 def mentions():
-    def champ(texte):
-        return f'<span class="a-completer">[{texte}]</span>'
     corps = f"""
 <section class="page-tete">
 <div class="conteneur legal">
 <p class="etiquette">Informations légales</p>
 <h1>Mentions légales et confidentialité</h1>
-<p class="note">Les champs en orange sont à compléter avant la mise en ligne.</p>
 
 <h2>Éditeur du site</h2>
 <ul>
 <li>Éditeur : {EDITEUR}</li>
-<li>Forme juridique : {champ("EURL, à confirmer")}</li>
-<li>Capital social : {champ("à compléter")}</li>
 <li>Siège social : 7, rue Mokhtar Abdellatif, Alger-Centre, wilaya d'Alger, Algérie</li>
 <li>Registre du commerce : 16/00-1243785 B 26</li>
 <li>Numéro d'identification fiscale (NIF) : 00261612437854700000</li>
-<li>Téléphone : +213 773 25 45 39</li>
-<li>Directeur de la publication : {champ("à compléter")}</li>
+<li>Téléphone : <a href="tel:+213773254539">+213 773 25 45 39</a></li>
+<li>Directeur de la publication : Racim Si Smail</li>
 <li>Contact : <a href="mailto:{MAIL}">{MAIL}</a></li>
 </ul>
 
 <h2>Hébergement</h2>
-<p>Le site est hébergé par Hostinger.</p>
+<p>Le site est hébergé par GitHub Pages, service de GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis. Le nom de domaine est enregistré chez Hostinger.</p>
 
 <h2>Propriété intellectuelle</h2>
-<p>Les textes, logos et éléments graphiques sont la propriété d'{EDITEUR}. Toute reproduction sans autorisation écrite est interdite. {PRODUIT} est une marque de son éditeur {champ("à vérifier avant dépôt")}.</p>
+<p>Les textes, logos et éléments graphiques sont la propriété d'{EDITEUR}. Toute reproduction sans autorisation écrite est interdite. {PRODUIT} est un produit d'{EDITEUR}.</p>
 
 <h2 id="confidentialite">Politique de confidentialité</h2>
 <p>Cette page explique quelles données ce site collecte, pourquoi, et comment les faire corriger ou supprimer.</p>
@@ -660,13 +656,13 @@ def mentions():
 <p>Répondre à votre demande et préparer une démonstration. Aucune autre utilisation, aucune revente.</p>
 
 <h3>Cookies et mesure d'audience</h3>
-<p>Le site ne dépose aucun cookie de suivi publicitaire et n'utilise aucun outil de mesure d'audience.</p>
+<p>Le site ne dépose aucun cookie de suivi publicitaire et n'utilise aucun outil de mesure d'audience. Son hébergeur conserve des journaux techniques (dont l'adresse IP des visiteurs) pour la sécurité du service.</p>
 
 <h3>Envoi de la demande</h3>
-<p>Le formulaire enregistre votre demande auprès de son service d'envoi. Si ce service n'est pas configuré, il ouvre votre messagerie avec le texte prérempli : rien n'est transmis tant que vous n'envoyez pas l'e-mail vous-même.</p>
+<p>Le formulaire ouvre votre messagerie avec le texte prérempli, adressé à {MAIL}. Rien n'est transmis tant que vous n'envoyez pas l'e-mail vous-même.</p>
 
 <h3>Durée de conservation</h3>
-<p>Les demandes sont conservées le temps de la discussion commerciale, puis supprimées sur demande, et au plus tard après {champ("durée à fixer")}.</p>
+<p>Les demandes sont conservées le temps de la discussion commerciale, puis supprimées sur demande, et au plus tard trois ans après le dernier échange.</p>
 
 <h3>Vos droits</h3>
 <p>Vous pouvez demander l'accès à vos données, leur correction ou leur suppression en écrivant à <a href="mailto:{MAIL}">{MAIL}</a>.</p>
