@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Notre usage de l'IA — Relance Pro</title>
+<meta name="description" content="Les modèles d'IA de Relance Pro : ce qu'ils font, ce qu'ils reçoivent, qui valide chaque action.">
+<link rel="canonical" href="https://amiimmobilier.pro/ia.html">
+<meta name="theme-color" content="#104360">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Relance Pro">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Notre usage de l'IA — Relance Pro">
+<meta property="og:description" content="Les modèles d'IA de Relance Pro : ce qu'ils font, ce qu'ils reçoivent, qui valide chaque action.">
+<meta property="og:url" content="https://amiimmobilier.pro/ia.html">
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Relance Pro", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "inLanguage": "fr", "description": "CRM pour agences immobilières en Algérie : leads, rappels, mandats, visites, agenda, prospection d'annonces et comptabilité. Assistant IA dont chaque écriture est validée par l'agent.", "url": "https://amiimmobilier.pro", "publisher": {"@type": "Organization", "name": "AMI Immobilier", "url": "https://amiimmobilier.pro", "email": "contact@amiimmobilier.pro"}}</script>
+</head>
+<body>
+<a class="saut" href="#contenu">Aller au contenu</a>
+<header class="entete">
+<div class="conteneur entete-ligne">
+<a href="index.html" class="marque" aria-label="Relance Pro, accueil">
+<img src="logo.png" alt="" width="40" height="40"><span class="marque-texte"><b>Relance Pro</b><small>par AMI Immobilier</small></span></a>
+<nav class="nav" id="nav" aria-label="Principal">
+<a href="index.html">Accueil</a>
+<a href="services.html">Modules</a>
+<a href="ia.html" class="actif">Notre usage de l'IA</a>
+<a href="faq.html">Questions</a>
+<a href="contact.html" class="bouton bouton-petit">Demander une démo</a>
+</nav>
+<button class="menu-bouton" id="menu" aria-label="Ouvrir le menu" aria-controls="nav" aria-expanded="false">Menu</button>
+</div>
+</header>
+<main id="contenu">
+
+<section class="page-tete">
+<div class="conteneur">
+<p class="etiquette">Notre usage de l'IA</p>
+<h1>Quel modèle fait quoi, ce qu'il reçoit, et qui valide.</h1>
+<p class="lead">Relance Pro utilise plusieurs modèles d'IA. Cette page les décrit un par un. Elle est mise à jour quand un modèle change.</p>
+</div>
+</section>
+<section>
+<div class="conteneur">
+<div class="defile">
+<table class="tableau">
+<caption class="sr-seul">Les fonctions d'IA de Relance Pro</caption>
+<thead><tr><th scope="col">Fonction</th><th scope="col">Modèle</th><th scope="col">Ce qui est envoyé</th><th scope="col">Validation humaine</th></tr></thead>
+<tbody><tr><td>Assistant de l'agent (Telegram) : comprendre une demande et proposer une action</td><td>Claude Sonnet, d'Anthropic, appelé via OpenRouter</td><td>Le message de l'agent, et les informations du CRM que l'assistant consulte pour répondre</td><td>Oui. Chaque écriture attend la validation de l'agent.</td></tr><tr><td>Transcription des messages vocaux</td><td>Gemini, de Google, via OpenRouter</td><td>L'enregistrement vocal envoyé par l'agent</td><td>Oui. La proposition qui en découle est validée par l'agent.</td></tr><tr><td>Tri des annonces de prospection : particulier ou agence, immobilier ou non</td><td>Gemini Flash, de Google. Kimi K2, de Moonshot, en secours.</td><td>Titres et descriptions d'annonces publiées par les vendeurs</td><td>Non. Les annonces écartées sont comptées et tracées.</td></tr><tr><td>Lecture des annonces en arabe ou en darija</td><td>Gemini Flash, de Google</td><td>Texte d'annonces publiques</td><td>Non. La traduction sert au tri ; les données enregistrées restent celles de l'annonce d'origine.</td></tr><tr><td>Note indicative de l'état des photos d'un bien</td><td>Modèle de vision, via OpenRouter</td><td>Photos publiques de l'annonce</td><td>Non. La note est indicative et affichée comme telle.</td></tr></tbody>
+</table>
+</div>
+</div>
+</section>
+<section class="alt">
+<div class="conteneur separe">
+<div>
+<p class="etiquette">Principes</p>
+<h2>Ce que l'IA peut faire, et ce qu'elle ne fera pas.</h2>
+</div>
+<ul class="coches">
+<li><b>Une écriture, un accord.</b> L'assistant propose ; l'agent valide. L'assistant ne supprime rien et ne peut pas annuler un rendez-vous.</li>
+<li><b>Pas d'entraînement de notre côté.</b> Nous n'entraînons aucun modèle sur les données de votre agence.</li>
+<li><b>Les fournisseurs gardent leurs conditions.</b> Les requêtes passent par OpenRouter, qui les transmet au fournisseur du modèle. Ces fournisseurs appliquent leurs propres conditions d'utilisation.</li>
+<li><b>L'IA peut se tromper.</b> Chaque fiche proposée montre ce qu'elle va enregistrer, pour être corrigée avant validation.</li>
+<li><b>Ce que l'IA ne fait pas.</b> Elle n'envoie pas de message à un prospect, elle ne signe aucun mandat et ne fixe aucun prix.</li>
+</ul>
+</div>
+</section>
+<section class="appel-zone">
+<div class="conteneur">
+<div class="appel">
+<h2>Une question sur l'utilisation de vos données ?</h2>
+<p>Écrivez-nous : nous répondons précisément, modèle par modèle.</p>
+<div class="boutons centre"><a href="mailto:contact@amiimmobilier.pro" class="bouton bouton-clair">contact@amiimmobilier.pro</a></div>
+</div>
+</div>
+</section>
+
+</main>
+<footer class="pied">
+<div class="conteneur">
+<div class="pied-grille">
+<div>
+<a href="index.html" class="marque"><img src="logo.png" alt="" width="40" height="40"><span class="marque-texte"><b>Relance Pro</b><small>par AMI Immobilier</small></span></a>
+<p>Le CRM des agences immobilières en Algérie : leads, rappels, mandats, visites, prospection et comptabilité.</p>
+</div>
+<div>
+<h4>Produit</h4>
+<ul>
+<li><a href="services.html">Modules</a></li>
+<li><a href="ia.html">Notre usage de l'IA</a></li>
+<li><a href="faq.html">Questions fréquentes</a></li>
+<li><a href="contact.html">Demander une démonstration</a></li>
+</ul>
+</div>
+<div>
+<h4>Contact</h4>
+<ul>
+<li><a href="mailto:contact@amiimmobilier.pro">contact@amiimmobilier.pro</a></li>
+<li><a href="mentions-legales.html">Mentions légales</a></li>
+<li><a href="mentions-legales.html#confidentialite">Confidentialité</a></li>
+</ul>
+</div>
+</div>
+<div class="pied-bas">© 2026 AMI Immobilier. Relance Pro est un produit d'AMI Immobilier. Siège : Alger-Centre, Algérie.</div>
+</div>
+</footer>
+<script src="menu.js"></script>
+</body>
+</html>
