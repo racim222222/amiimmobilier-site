@@ -206,7 +206,14 @@ p { margin: 0 0 16px; }
 .separe { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
 .separe .lead { margin-top: 0; }
 
+/* ── Preuve chiffrée et numéros de cartes ──────────────── */
+.chiffre { display: flex; align-items: baseline; gap: 16px; margin: 0 0 28px; padding-bottom: 24px; border-bottom: 1px solid var(--bord); }
+.chiffre b { font-size: 52px; line-height: 1; font-weight: 800; color: var(--marine); letter-spacing: -0.03em; white-space: nowrap; }
+.chiffre span { color: var(--doux); font-size: 16px; max-width: 280px; }
+.num-carte { display: block; font-size: 14px; font-weight: 800; color: var(--turquoise-fonce); letter-spacing: .08em; margin-bottom: 14px; }
+
 /* ── Bande de zone et appel final ──────────────────────── */
+.appel-zone.appel-espace { padding-top: 100px; }
 .appel-zone { padding: 0 0 100px; }
 .appel { background: var(--marine); border-radius: 26px; padding: 72px; text-align: center; color: #e8f1f5; }
 .appel h2 { color: #fff; font-size: 38px; }

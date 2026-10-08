@@ -17,6 +17,7 @@ MAIL = "contact@amiimmobilier.pro"
 # ── Gabarits communs ───────────────────────────────────────────────────────────
 NAV = [
     ("index.html", "Accueil", "accueil"),
+    ("accompagnement.html", "Accompagnement", "accompagnement"),
     ("services.html", "Modules", "modules"),
     ("ia.html", "Notre usage de l'IA", "ia"),
     ("faq.html", "Questions", "faq"),
@@ -31,9 +32,9 @@ def donnees_structurees():
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
         "inLanguage": "fr",
-        "description": ("CRM pour agences immobilières en Algérie : leads, rappels, mandats, visites, "
-                        "agenda, prospection d'annonces et comptabilité. Assistant IA dont chaque écriture "
-                        "est validée par l'agent."),
+        "description": ("CRM pour agences immobilières en Algérie, éprouvé chez AMI Immobilier à Alger, avec "
+                        "audit des process, mise en place et formation des équipes. Assistant IA dont chaque "
+                        "écriture est validée par l'agent."),
         "url": SITE,
         "publisher": {"@type": "Organization", "name": EDITEUR, "url": SITE, "email": MAIL},
     }
@@ -91,7 +92,7 @@ def pied():
 <div class="pied-grille">
 <div>
 <a href="index.html" class="marque"><img src="logo.png" alt="" width="40" height="40"><span class="marque-texte"><b>{PRODUIT}</b><small>par {EDITEUR}</small></span></a>
-<p>Le CRM des agences immobilières en Algérie : leads, rappels, mandats, visites, prospection et comptabilité.</p>
+<p>Le CRM éprouvé dans une agence d'Alger, avec l'audit des process et la formation des équipes.</p>
 </div>
 <div>
 <h4>Produit</h4>
@@ -180,9 +181,9 @@ def accueil():
 <section class="heros" aria-labelledby="titre">
 <div class="conteneur heros-grille">
 <div>
-<p class="etiquette">CRM pour agences immobilières en Algérie</p>
-<h1 id="titre">Le CRM des agences immobilières en Algérie.</h1>
-<p class="lead">Leads, rappels, mandats, visites et comptabilité dans un seul outil. Un agent dicte un prospect, l'assistant prépare la fiche, et rien n'est enregistré sans sa validation.</p>
+<p class="etiquette">CRM et accompagnement pour agences immobilières en Algérie</p>
+<h1 id="titre">Le CRM qui fait tourner notre agence, installé dans la vôtre.</h1>
+<p class="lead">{PRODUIT} a été construit et éprouvé chez {EDITEUR}, agence immobilière à Alger. Nous l'installons dans votre agence, nous auditons vos process, et nous formons vos équipes jusqu'à ce qu'elles l'utilisent seules.</p>
 <div class="boutons">
 <a href="contact.html" class="bouton">Demander une démonstration</a>
 <a href="#fonctionnement" class="bouton secondaire">Voir comment ça marche</a>
@@ -205,6 +206,40 @@ def accueil():
 {carte("rappel", "Des rappels qui dépendent de la mémoire", "Un rappel oublié est un mandat perdu. Chaque rappel est daté, assigné à un agent et apparaît dans sa liste du jour.")}
 {carte("recherche", "Une prospection faite à la main", "Les annonces de particuliers sont collectées et triées automatiquement. Les doublons, les agences et le hors-sujet sont écartés avant que l'agent n'appelle.")}
 </div>
+</div>
+</section>
+
+<section class="alt" aria-labelledby="preuve">
+<div class="conteneur separe">
+<div>
+<p class="etiquette">Éprouvé sur le terrain</p>
+<h2 id="preuve">Pas un logiciel de bureau d'études. L'outil de travail d'une vraie agence.</h2>
+<p class="lead petit">{PRODUIT} est l'outil sur lequel {EDITEUR} travaille chaque jour à Alger. Chaque écran a été ajusté par des agents qui appellent, visitent et signent des mandats.</p>
+</div>
+<div>
+<p class="chiffre"><b>1 100+</b><span>appels suivis dans le centre d'appels de notre agence depuis novembre 2025</span></p>
+<ul class="coches">
+<li>Process de prospection, de relance et de signature testés sur nos propres dossiers.</li>
+<li>Statuts, rappels et files de travail réglés sur les contraintes du métier, pas sur une théorie.</li>
+<li>Ce que nous installons chez vous, nous l'utilisons d'abord chez nous.</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="accompagnement-titre">
+<div class="conteneur">
+<div class="entete-section">
+<p class="etiquette">Notre accompagnement</p>
+<h2 id="accompagnement-titre">Un outil ne suffit pas. Nous installons aussi la méthode.</h2>
+<p>Un CRM mal utilisé reste un tableur. Nous partons de vos process, nous les corrigeons, puis nous formons l'équipe sur l'outil.</p>
+</div>
+<div class="grille">
+<article class="carte"><span class="num-carte">01</span><h3>Audit de vos process</h3><p>Du premier appel au mandat signé : nous observons comment votre agence traite un prospect, et nous repérons où les dossiers se perdent.</p></article>
+<article class="carte"><span class="num-carte">02</span><h3>Mise en place de {PRODUIT}</h3><p>Statuts, files de travail, rôles et modules réglés sur vos process corrigés. Vos fichiers existants sont repris.</p></article>
+<article class="carte"><span class="num-carte">03</span><h3>Formation des équipes</h3><p>Une formation par profil, agent, responsable, comptable, jusqu'à ce que chacun travaille seul sur l'outil.</p></article>
+</div>
+<div class="boutons"><a href="accompagnement.html" class="bouton secondaire">Voir l'accompagnement en détail</a></div>
 </div>
 </section>
 
@@ -286,25 +321,11 @@ def accueil():
 </div>
 </section>
 
-<section aria-labelledby="demarrer">
-<div class="conteneur">
-<div class="entete-section">
-<p class="etiquette">Démarrer</p>
-<h2 id="demarrer">Une démonstration, puis une proposition écrite.</h2>
-</div>
-{etapes([
-    ("Une démonstration de 30 minutes", "Sur votre façon de travailler aujourd'hui, et sur ce qui vous ralentit le plus."),
-    ("Une proposition écrite", "Prix, modules et accompagnement, détaillés par écrit. Sans engagement de votre part."),
-    ("La mise en place avec l'équipe", "Réglage des statuts et des modules, puis formation par profil : agent, responsable, comptable."),
-])}
-</div>
-</section>
-
-<section class="appel-zone">
+<section class="appel-zone appel-espace">
 <div class="conteneur">
 <div class="appel">
-<h2>Voyons ce que l'outil change dans votre agence.</h2>
-<p>Trente minutes, sans engagement. À la fin, vous saurez si {PRODUIT} correspond à votre façon de travailler.</p>
+<h2>Parlons du fonctionnement de votre agence.</h2>
+<p>Un échange de trente minutes. Si nous pouvons vous aider, vous recevez une proposition écrite : outil, audit, formation. Sans engagement.</p>
 <div class="boutons centre">
 <a href="contact.html" class="bouton bouton-clair">Demander une démonstration</a>
 </div>
@@ -312,8 +333,8 @@ def accueil():
 </div>
 </section>
 """
-    return page(f"{PRODUIT} — le CRM des agences immobilières en Algérie",
-                "Leads, rappels, mandats, visites et comptabilité dans un seul outil, avec un assistant IA dont chaque action est validée par l'agent. Démonstration sur demande.",
+    return page(f"{PRODUIT} — CRM et accompagnement des agences immobilières en Algérie",
+                "Le CRM qui fait tourner une agence d'Alger, installé dans la vôtre : audit de vos process, mise en place et formation de vos équipes. Démonstration sur demande.",
                 "index.html", "accueil", corps)
 
 
@@ -485,10 +506,89 @@ def ia():
                 "ia.html", "ia", corps)
 
 
+def accompagnement():
+    def volet(num, titre, accroche, obtenu, faits):
+        lis = "".join(f"<li>{f}</li>" for f in faits)
+        return f"""<article class="module">
+<div class="module-tete">
+<p class="etiquette">Étape {num}</p>
+<h2>{titre}</h2>
+<p class="lead petit">{accroche}</p>
+<p class="pour"><b>Vous obtenez :</b> {obtenu}</p>
+</div>
+<ul class="coches">{lis}</ul>
+</article>"""
+    volets = [
+        volet("01", "Audit de vos process",
+              "Avant de toucher à un outil, nous regardons comment votre agence travaille vraiment.",
+              "un compte rendu des pertes repérées et le process cible, étape par étape.",
+              ["Suivi d'un prospect réel, du premier appel au mandat signé",
+               "Échanges avec les agents, le responsable et la personne qui tient la comptabilité",
+               "Repérage des pertes : rappels oubliés, doublons, informations dispersées entre plusieurs outils"]),
+        volet("02", f"Mise en place de {PRODUIT}",
+              "L'outil est réglé sur votre process corrigé, pas l'inverse.",
+              "un outil prêt à l'emploi, configuré pour votre agence.",
+              ["Statuts de suivi, files de travail et rôles réglés sur le process cible",
+               "Modules activés selon vos besoins : prospection, mandats, visites, comptabilité, vidéo",
+               "Reprise de vos fichiers existants"]),
+        volet("03", "Formation de vos équipes",
+              "Un outil n'est utile que s'il est utilisé. Nous formons chaque profil sur les écrans qui le concernent.",
+              "une équipe qui travaille seule sur l'outil.",
+              ["Une session par profil : agent, responsable, comptable",
+               "Exercices sur vos propres dossiers, pas sur des exemples",
+               "Suivi des premières semaines pour ajuster ce qui coince"]),
+    ]
+    corps = f"""
+<section class="page-tete">
+<div class="conteneur">
+<p class="etiquette">Accompagnement</p>
+<h1>Nous installons l'outil, et la méthode qui va avec.</h1>
+<p class="lead">Un CRM ne range pas une agence tout seul. Nous auditons vos process, nous installons {PRODUIT} sur des process corrigés, et nous formons vos équipes. C'est la méthode de notre propre agence, {EDITEUR}, à Alger.</p>
+<div class="boutons"><a href="contact.html" class="bouton">Parler de votre agence</a></div>
+</div>
+</section>
+<section class="alt">
+<div class="conteneur">
+{''.join(volets)}
+</div>
+</section>
+<section aria-labelledby="pourquoi">
+<div class="conteneur separe">
+<div>
+<p class="etiquette">Pourquoi nous</p>
+<h2 id="pourquoi">Nous avons d'abord organisé notre propre agence.</h2>
+<p class="lead petit">{EDITEUR} est une agence immobilière à Alger. Avant de proposer {PRODUIT} à d'autres, nous l'avons utilisé, corrigé et ajusté sur nos propres dossiers, avec nos propres agents.</p>
+</div>
+<ul class="coches">
+<li>Nous connaissons vos contraintes : les prospects qui ne répondent pas, les annonces en arabe et en darija, les mandats à faire signer.</li>
+<li>Nos recommandations viennent de ce qui a marché chez nous, pas d'un modèle générique.</li>
+<li>Vous parlez à des gens du métier, qui ont tenu un centre d'appels et une comptabilité d'agence.</li>
+</ul>
+</div>
+</section>
+<section class="appel-zone">
+<div class="conteneur">
+<div class="appel">
+<h2>Commençons par votre process actuel.</h2>
+<p>Un échange de trente minutes pour comprendre votre agence. Si nous pouvons vous aider, vous recevez une proposition écrite.</p>
+<div class="boutons centre"><a href="contact.html" class="bouton bouton-clair">Parler de votre agence</a></div>
+</div>
+</div>
+</section>
+"""
+    return page(f"Accompagnement — {PRODUIT}",
+                "Audit des process, mise en place de Relance Pro et formation des équipes : la méthode d'une agence d'Alger, appliquée à la vôtre.",
+                "accompagnement.html", "accompagnement", corps)
+
+
 def faq():
     questions = [
         ("À qui s'adresse Relance Pro ?",
          "Aux agences immobilières qui travaillent à plusieurs et qui veulent suivre leurs prospects, leurs rappels, leurs mandats et leur comptabilité dans un seul outil."),
+        ("Qui est derrière Relance Pro ?",
+         "AMI Immobilier, agence immobilière à Alger. Relance Pro est l'outil sur lequel notre agence travaille chaque jour ; nous le déployons aujourd'hui dans d'autres agences."),
+        ("Que comprend l'accompagnement ?",
+         "Un audit de vos process, la mise en place de Relance Pro réglé sur ces process, puis la formation de vos équipes par profil. Le détail est sur la page <a href=\"accompagnement.html\">Accompagnement</a>."),
         ("Pourquoi un outil conçu pour l'Algérie ?",
          "Parce que les annonces, les langues et les pratiques de l'agence sont algériennes : les plateformes d'annonces, l'arabe et la darija, les wilayas et les communes. Un outil générique oblige à tout adapter à la main."),
         ("Comment fonctionne l'assistant IA ?",
@@ -504,7 +604,7 @@ def faq():
         ("Puis-je exporter mes données ?",
          "La comptabilité s'exporte en Excel et en CSV. L'export des leads et des rappels se définit lors de la mise en place, selon vos besoins."),
         ("Combien ça coûte ?",
-         "Le prix dépend du nombre d'agents et des modules activés. Après la démonstration, vous recevez une proposition écrite, sans engagement."),
+         "Le prix dépend du nombre d'agents, des modules activés et de l'accompagnement choisi. Après l'échange, vous recevez une proposition écrite, sans engagement."),
         ("Comment se déroule la mise en place ?",
          "Une démonstration de 30 minutes sur votre fonctionnement, puis une proposition écrite, puis le réglage des statuts et des modules, et une formation par profil : agent, responsable, comptable."),
     ]
@@ -598,6 +698,8 @@ def contact():
 <option>Prospection d'annonces</option>
 <option>Mandats et visites</option>
 <option>Comptabilité</option>
+<option>Audit et organisation de l'agence</option>
+<option>Formation des équipes</option>
 <option>Autre</option>
 </select>
 </div>
@@ -632,6 +734,7 @@ def mentions():
 <h2>Éditeur du site</h2>
 <ul>
 <li>Éditeur : {EDITEUR}</li>
+<li>Forme juridique : entreprise unipersonnelle à responsabilité limitée (EURL)</li>
 <li>Siège social : 7, rue Mokhtar Abdellatif, Alger-Centre, wilaya d'Alger, Algérie</li>
 <li>Registre du commerce : 16/00-1243785 B 26</li>
 <li>Numéro d'identification fiscale (NIF) : 00261612437854700000</li>
@@ -677,6 +780,7 @@ def mentions():
 # ── Écriture ───────────────────────────────────────────────────────────────────
 PAGES = {
     "index.html": accueil,
+    "accompagnement.html": accompagnement,
     "services.html": modules,
     "ia.html": ia,
     "faq.html": faq,
